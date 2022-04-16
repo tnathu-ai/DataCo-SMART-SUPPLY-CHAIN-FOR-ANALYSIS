@@ -4,6 +4,8 @@ import numpy as np
 
 # ignore DeprecationWarning Error Messages
 import warnings
+import numpy as np
+from scipy.stats import kurtosis, skew
 
 warnings.filterwarnings('ignore')
 
@@ -27,48 +29,6 @@ def whitespace_remover(df):
         else:
             # if condition is False then it will do nothing.
             pass
-
-def rename_cols(df):
-    rename_cols = ['type', 'real_shipping', 'scheduled_shipping',
-       'benefit_per_order', 'sales_per_customer', 'delivery_status',
-       'late_delivery_risk', 'category_id', 'category_name', 'customer_city',
-       'customer_country', 'customer_email', 'customer_fname', 'customer_id',
-       'customer_lname', 'customer_password', 'customer_segment',
-       'customer_state', 'customer_street', 'customer_zipcode',
-       'department_id', 'department_name', 'latitude', 'longitude', 'Market',
-       'order_city', 'order_country', 'order_customer_id',
-       'order_date', 'order_id', 'order_item_cardprod_id',
-       'order_item_discount', 'order_item_discount_rate', 'order_item_id',
-       'order_item_product_price', 'order_item_profit_ratio',
-       'order_item_quantity', 'sales', 'order_item_total',
-       'order_profit_per_order', 'order_region', 'order_state', 'order_status',
-       'order_zipcode', 'product_card_id', 'product_category_id',
-       'product_description', 'product_image', 'product_name', 'product_price',
-       'product_status', 'shipping_date', 'shipping_mode']
-    df.columns = rename_cols
-    
-    
-def basic_cleaning(filename):
-    df = pd.read_csv(filename, error_bad_lines=False, encoding= 'unicode_escape')
-    
-    # rename columns follow SQL conventions
-    rename_cols(df)
-    
-    df = df.drop(['product_description'], inplace=True)
-    
-    # Cast all values inside the dataframe (except the columns' name) into lower case.
-    df = df.applymap(lambda s: s.lower() if type(s) == str else s)
-    
-    # convert columns to the best possible dtypes, object->string
-    df = df.convert_dtypes()
-    
-    # remove extra leading and trailing whitespace 
-    whitespace_remover(df)
-    
-    # print out the shape
-    print(f'The shape of the df is (row, column): {df.shape}\n')
-    print(f'The list of the National Leagues final columns\' names is: {df.columns.to_list()}\n\n\n')
-    return df.head()
     
     
     

@@ -1,0 +1,53 @@
+fields,description
+type,:  type of transaction made
+days for shipping (real)     ,:  actual shipping days of the purchased product
+days for shipment (scheduled),:  days of scheduled delivery of the purchased product
+benefit per order,:  earnings per order placed
+sales per customer,:  total sales per customer made per customer
+delivery status,":  delivery status of orders: advance shipping , late delivery , shipping canceled , shipping on time"
+late_delivery_risk           ,":  categorical variable that indicates if sending is late (1), it is not late (0)."
+category id,:  product category code
+category name,:  description of the product category
+customer city,:  city where the customer made the purchase
+customer country,:  country where the customer made the purchase
+customer email,:  customer's email
+customer fname,:  customer name
+customer id,:  customer id
+customer lname,:  customer lastname
+customer password,:  masked customer key
+customer segment,":  types of customers: consumer , corporate , home office"
+customer state,:  state to which the store where the purchase is registered belongs
+customer street,:  street to which the store where the purchase is registered belongs
+customer zipcode,:  customer zipcode
+department id,:  department code of store
+department name,:  department name of store
+latitude,:  latitude corresponding to location of store
+longitude,:  longitude corresponding to location of store
+market,":  market to where the order is delivered : africa , europe , latam , pacific asia , usca"
+order city,:  destination city of the order
+order country,:  destination country of the order
+order customer id,:  customer order code
+order date (dateorders),:  date on which the order is made
+order id,:  order code
+order item cardprod id,:  product code generated through the rfid reader
+order item discount,:  order item discount value
+order item discount rate     ,:  order item discount percentage
+order item id,:  order item code
+order item product price     ,:  price of products without discount
+order item profit ratio,:  order item profit ratio
+order item quantity,:  number of products per order
+sales,:  value in sales
+order item total  ,:  total amount per order
+order profit per order,:  order profit per order
+order region,":  region of the world where the order is delivered :  southeast asia ,south asia ,oceania ,eastern asia, west asia , west of usa , us center , west africa, central africa ,north africa ,western europe ,northern , caribbean , south america ,east africa ,southern europe , east of usa ,canada ,southern africa , central asia ,  europe , central america, eastern europe , south of  usa "
+order state,:  state of the region where the order is delivered
+order status,":  order status : complete , pending , closed , pending_payment ,canceled , processing ,suspected_fraud ,on_hold ,payment_review"
+product card id,:  product code
+product category id,:  product category code
+product description,:  product description
+product image,:  link of visit and purchase of the product
+product name,:  product name
+product price,:  product price
+product status,":  status of the product stock :if it is 1 not available , 0 the product is available "
+shipping date (dateorders)   ,:  exact date and time of shipment
+shipping mode,":  the following shipping modes are presented : standard class , first class , second class , same day"
